@@ -85,7 +85,7 @@ public class Main {
 			}
 		}
 		if(j==-1) {
-			System.out.println("Destino no existente");
+			System.out.println("Producto no existente");
 		}else {
 			char option;
 			System.out.println("Modificar descripcion? S/N");
