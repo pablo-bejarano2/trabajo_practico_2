@@ -6,6 +6,7 @@ public class Producto {
 	private Double precioUnitario;
 	private OrigenFabricacion origen;
 	private Categoria categoria;
+	private Boolean disponible;
 	
 	
 	public enum OrigenFabricacion{
@@ -34,13 +35,14 @@ public class Producto {
 	}
 
 	public Producto(Integer codigo, String descripcion, Double precioUnitario, OrigenFabricacion origen,
-			Categoria categoria) {
+			Categoria categoria, Boolean disponible) {
 		super();
 		this.codigo = codigo;
 		this.descripcion = descripcion;
 		this.precioUnitario = precioUnitario;
 		this.origen = origen;
 		this.categoria = categoria;
+		this.disponible = disponible;
 	}
 
 	public Integer getCodigo() {
@@ -65,6 +67,15 @@ public class Producto {
 
 	public void setPrecioUnitario(Double precioUnitario) {
 		this.precioUnitario = precioUnitario;
+	}
+	
+	
+	public Boolean getDisponible() {
+		return disponible;
+	}
+
+	public void setDisponible(Boolean disponible) {
+		this.disponible = disponible;
 	}
 
 	public OrigenFabricacion getOrigen() {
@@ -112,8 +123,11 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return "Producto [codigo=" + codigo + ", descripcion=" + descripcion + ", precioUnitario=" + precioUnitario
-				+ ", origen=" + origen + ", categoria=" + categoria + "]";
+		return "Codigo del producto: " + codigo + " \n" +
+				"Descripcion: " + descripcion + " \n" +
+				"Precio por unidad: " + precioUnitario + " \n" +
+				 "Origen del producto: " + origen + " \n" +
+				 "Categoria del producto:" + categoria + " \n" ;
 	}
 	
 	
